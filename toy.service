@@ -1,0 +1,12 @@
+#/etc/systemd/system/toy.service
+[Unit]
+Description=lab6
+Requires=network-online.target
+After=network-online.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+ExecStart=/home/aivanov/decal-labs/b6/run
+User=aivanov
